@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Create Your Account</title>
+    <meta name="description" content="A secure and responsive signup form matching modern design standards.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://placehold.co/32x32/000000/ffffff?text=S">
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        /* Custom underline inputs matching the Figma design reference */
+        .underline-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            border-radius: 0;
+            color: #ffffff;
+            padding: 8px 0;
+            width: 100%;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .underline-input:focus {
+            border-bottom: 2px solid #3b82f6;
+        }
+        .underline-input::placeholder {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-black text-white selection:bg-blue-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="w-full py-6 px-8 border-b border-zinc-800">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tight">Portal</span>
+            <nav class="text-sm text-zinc-400 space-x-6">
+                <a href="#" class="hover:text-white transition">Home</a>
+                <a href="#" class="hover:text-white transition">About</a>
+                <a href="#" class="hover:text-white transition">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section with Signup Form -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-md mx-auto">
+            
+            <!-- Form Header Title matching Figma design -->
+            <h1 class="text-4xl font-bold tracking-tight mb-8">Signup</h1>
+
+            <form action="#" method="POST" class="space-y-6">
+                
+                <!-- Full Name Field -->
+                <div>
+                    <label for="fullname" class="block text-sm font-medium text-zinc-300 mb-1 sr-only">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required class="underline-input text-base">
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-zinc-300 mb-1 sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required class="underline-input text-base">
+                </div>
+
+                <!-- Password Field -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-zinc-300 mb-1 sr-only">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required class="underline-input text-base">
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div>
+                    <label for="confirm_password" class="block text-sm font-medium text-zinc-300 mb-1 sr-only">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required class="underline-input text-base">
+                </div>
+
+                <!-- Date of Birth Field -->
+                <div>
+                    <label for="dob" class="block text-sm font-medium text-zinc-300 mb-1 sr-only">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy" pattern="\d{2}-\d{2}-\d{4}" title="Format: dd-mm-yyyy" required class="underline-input text-base">
+                </div>
+
+                <!-- Radio Buttons: Student / Employee -->
+                <div class="flex items-center space-x-6 pt-2">
+                    <label class="flex items-center space-x-2 cursor-pointer text-sm">
+                        <input type="radio" name="usertype" value="student" required class="accent-white h-4 w-4">
+                        <span>Student</span>
+                    </label>
+                    <label class="flex items-center space-x-2 cursor-pointer text-sm">
+                        <input type="radio" name="usertype" value="employee" required class="accent-white h-4 w-4">
+                        <span>Employee</span>
+                    </label>
+                </div>
+
+                <!-- Checkbox: Terms and Conditions -->
+                <div class="flex items-center space-x-2 pt-1">
+                    <input type="checkbox" id="terms" name="terms" required class="accent-white h-4 w-4 rounded">
+                    <label for="terms" class="text-xs text-zinc-300 cursor-pointer select-none">
+                        I agree to all the Terms and conditions
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" class="w-full py-3 px-4 bg-white text-black font-medium rounded-lg hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white transition duration-200 shadow-lg">
+                        Signup
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full py-6 px-8 border-t border-zinc-800 text-center text-xs text-zinc-500">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Portal Inc. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
